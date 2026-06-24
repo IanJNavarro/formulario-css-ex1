@@ -5,6 +5,22 @@ select:required {
   border-color: blue;
 }
 
-input:checked:required {
-  border-color: blue;
+input:user-valid {
+  border-color: green;
+}
+
+input:user-invalid {
+  border-color: red;
+}
+
+select:user-invalid {
+  border-color: red;
+}
+
+select:user-valid {
+  border-color: green;
+}
+
+.required {
+  color: blue;
 }

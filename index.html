@@ -7,6 +7,7 @@
     <title>Formulario</title>
   </head>
   <body>
+    <h1>Formulario de Registro</h1>
     <form action="procesar.html" method="post">
       <label for="usuario">Nombre de usuario (5 a 15 acaracteres):</label>
       <input
@@ -17,8 +18,10 @@
         minlength="5"
         maxlength="15"
       />
+      <br />
       <label for="edad">Edad (rango permitido de 18 a 99):</label>
       <input type="number" name="edad" id="edad" required min="18" max="99" />
+      <br />
       <label for="pais">Pais de residencia:</label>
       <select name="pais" id="pais" required>
         <option value="">Selecciona un pais...</option>
@@ -26,7 +29,9 @@
         <option value="CO">Colombia</option>
         <option value="AR">Argentina</option>
       </select>
-      <p>Tipo de Cuenta:</p>
+      <br />
+      <label>Tipo de Cuenta:</label>
+      <span class="required">*</span>
       <input
         type="radio"
         id="cuenta-personal"
@@ -54,9 +59,12 @@
       <label for="terminos"
         >Acepto los terminos y condiciones de la plataforma</label
       >
+      <span class="required">*</span>
+      <br />
       <label for="comentarios"
         >Comentarios o sugerencias (maximo 200 caracteres)</label
       >
+      <br />
       <textarea name="comentarios" id="comentarios" maxlength="200"></textarea>
 
       <button type="submit">Enviar Formulario</button>
