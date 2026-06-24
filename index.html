@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <form action="procesar.html" method="post">
+      <label for="usuario">Nombre de usuario (5 a 15 acaracteres):</label>
+      <input
+        type="text"
+        name="usuario"
+        id="usuario"
+        required
+        minlength="5"
+        maxlength="15"
+      />
+      <label for="edad">Edad (rango permitido de 18 a 99):</label>
+      <input type="number" name="edad" id="edad" required min="18" max="99" />
+      <label for="pais">Pais de residencia:</label>
+      <select name="pais" id="pais" required>
+        <option value="">Selecciona un pais...</option>
+        <option value="MX">Mexico</option>
+        <option value="CO">Colombia</option>
+        <option value="AR">Argentina</option>
+      </select>
+      <p>Tipo de Cuenta:</p>
+      <input
+        type="radio"
+        id="cuenta-personal"
+        name="tipo-cuenta"
+        value="personal"
+        required
+      />
+      <label for="cuenta-personal">Personal</label>
+      <input
+        type="radio"
+        name="tipo-cuenta"
+        id="cuenta-empresa"
+        value="empresa"
+      />
+      <label for="cuenta-empresa">Empresarial</label>
+      <br /><br />
+
+      <input
+        type="checkbox"
+        name="terminos"
+        id="terminos"
+        value="aceptado"
+        required
+      />
+      <label for="terminos"
+        >Acepto los terminos y condiciones de la plataforma</label
+      >
+      <label for="comentarios"
+        >Comentarios o sugerencias (maximo 200 caracteres)</label
+      >
+      <textarea name="comentarios" id="comentarios" maxlength="200"></textarea>
+
+      <button type="submit">Enviar Formulario</button>
+    </form>
+  </body>
+</html>

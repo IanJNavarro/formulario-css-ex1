@@ -1,0 +1,10 @@
+input:required {
+  border-color: blue;
+}
+select:required {
+  border-color: blue;
+}
+
+input:checked:required {
+  border-color: blue;
+}
